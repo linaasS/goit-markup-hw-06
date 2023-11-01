@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="Effective Solutions for Your Business" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <!-- Посилання на шрифти -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +22,7 @@
   </head>
   <body>
     <!-- Шапка веб-сторінки -->
-    <header class="header">
+    <header class="header hide">
       <div class="container header-div">
         <!-- Меню навігації -->
         <nav class="header-nav">
@@ -55,12 +56,32 @@
             </li>
           </ul>
         </address>
+        <!-- BUTTON MENU -->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="32"
+            height="22"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Основний контент -->
     <main>
       <!-- Секція 1 -->
-      <section class="first-section">
+      <section class="first-section hide">
         <div class="first-section-div container">
           <h1 class="first-section-h">Effective Solutions for Your Business</h1>
           <button class="first-section-btn" type="button" data-modal-open>
@@ -456,7 +477,7 @@
       </div>
     </footer>
     <!-- Модальне вікно -->
-    <div class="overlay is-hidden" data-modal>
+    <div class="overlay is-hidden hide" data-modal>
       <div class="modal">
         <button
           class="modal-btn"
@@ -547,7 +568,85 @@
         </form>
       </div>
     </div>
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container hide" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <div class="mobile-svg">
+          <svg class="mobile-close-svg" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-mobile-menu"></use>
+          </svg>
+        </div>
+      </button>
+      <nav class="mobile-header-menu-nav">
+        <ul class="mobile-header-menu list">
+          <li class="mobile-header-list-item">
+            <a class="link mobile-header-link" href="./index.html">Studio</a>
+          </li>
+          <li class="mobile-header-list-item">
+            <a class="link mobile-header-link" href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-header-list-item">
+            <a class="link mobile-header-link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="mobile-header-address-menu">
+        <ul class="list mobile-header-address-list">
+          <li class="mobile-header-address-list-item">
+            <a class="link mobile-header-link-add" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mobile-header-address-list-item">
+            <a
+              class="link mobile-header-link-add"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="mobile-team-icon-list list">
+        <li class="team-icon-list-item">
+          <a class="team-icon-list-link link" href=""
+            ><svg class="team-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-icon-list-item">
+          <a class="team-icon-list-link link" href=""
+            ><svg class="team-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-icon-list-item">
+          <a class="team-icon-list-link link" href=""
+            ><svg class="team-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="team-icon-list-item">
+          <a class="team-icon-list-link link" href="">
+            <svg class="team-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
