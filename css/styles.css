@@ -206,14 +206,28 @@ button {
 
 .first-section{
     background-color: var(--navy-blue-color);
-    padding: 188px 0px;
+    padding: 112px 0px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
+    rgba(46, 47, 66, 0.7)), url(../images/hero-bg-mobile-tablet.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     max-width: 1440px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .first-section{
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .first-section {
+        padding: 188px 0px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), url(../images/hero-bg-desktop.jpg);
+    }
 }
 
 .first-section-div{
@@ -223,17 +237,33 @@ button {
 
 .first-section-h{
     color: var(--white-color);
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
     font-weight: 700;
-
-    max-width: 496px;
-    text-align: center;
+    
+    max-width: 320px;
+    text-transform: capitalize;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+    .first-section-h{
+        font-size: 56px;
+        max-width: 496px;
+        line-height: 1.07;
+        margin-bottom: 36px;
+        text-transform: none;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .first-section-h{
+        margin-bottom: 48px;
+    }
 }
 
 .first-section-btn{
@@ -247,9 +277,9 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px var(--rgba-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 16px 32px;
-
+    
     margin-right: auto;
     margin-left: auto;
     min-width: 169px;
