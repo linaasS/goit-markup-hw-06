@@ -397,7 +397,7 @@ button {
     }
     
     .doing-list-item {
-        width: calc((100-24*2)/3);
+        width: calc( (100 - 24 * 2) / 3 );
     }
 }
 
@@ -1182,7 +1182,6 @@ button {
     padding: 0;
     border: 1px solid var(--cornflower-color);
     border-radius: 50%;
-    pad
 }
 
 @media (min-width: 768px) {
