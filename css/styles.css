@@ -113,7 +113,7 @@ button {
     font-size: 18px;
     text-transform: uppercase;
     line-height: 1.17;
-    letter-spacing: 0.54px;
+    letter-spacing: 0.03em;
     
     margin-right: 76px;
 }
@@ -284,13 +284,12 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         flex-shrink: 0;
-        gap: 24px;
+        gap: 72px 24px;
     }
 }
 
 .benefits-list-item{
     display: flex;
-    width: 396px;
     flex-direction: column;
     gap: 8px;
 }
@@ -445,7 +444,7 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         flex-shrink: 0;
-        gap: 24px;
+        gap: 72px 24px;
         }
 }
 
@@ -619,23 +618,65 @@ button {
 .footer-div{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 72px;
 }
 
 @media screen and (min-width: 768px) {
     .footer-div {
+        width: 584px;
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: baseline;
+        gap: 72px 24px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-div{
+        flex-wrap: nowrap;
+        width: 1158px;
+        gap: 0;
     }
 }
 
 .footer-icon-div{
-    margin-right: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+@media screen and (min-width:1158px) {
+    .footer-icon-div{
+        margin-right: 120px;
+    }
 }
 
 .footer-link{
     display: inline-block;
-    margin-bottom: 16px;
-    margin-right: 0px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--iris-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-link{
+        text-align: left;
+    }
 }
 
 .footer-span {
@@ -651,7 +692,13 @@ button {
 .social-media-div{
     display: flex;
     flex-direction: column;
-    margin-left: 120px;
+}
+
+@media screen and (min-width: 1158px) {
+    .social-media-div{
+        margin-right: 80px;
+        width: 208px;
+    }
 }
 
 .footer-social-media-p{
@@ -660,11 +707,25 @@ button {
     width: 264px;
     margin-bottom: 16px;
     font-weight: 500;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-social-media-p{
+        text-align: left;
+    }
 }
 
 .footer-icon-list {
     display: flex;
     gap: 16px;
+    justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-icon-list {
+        justify-content: flex-start;
+    }
 }
 
 .footer-icon-list-link{
@@ -700,11 +761,25 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--white-color);
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-form-p{
+        text-align: left;
+    }
 }
 
 .footer-form{
     display: flex;
     gap: 24px;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-form{
+        flex-direction: row;
+    }
 }
 
 .footer-label{
@@ -712,7 +787,7 @@ button {
 }
 
 .footer-input{
-    width: 264px;
+    width: 396px;
     height: 40px;
     border: 1px solid var(--white-color);
     background-color: transparent;
@@ -725,12 +800,18 @@ button {
     color: var(--white-color);
 }
 
+@media screen and (min-width: 768px) {
+    .footer-input{
+        width: 264px;
+    }
+}
+
 .footer-input::placeholder{
     color: var(--white-color);
 }
 
 .sub-btn{
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -745,6 +826,7 @@ button {
     background-color: var(--iris-color);
     border: none;
     border-radius: 4px;
+    margin: 0 auto;
 }
 
 .sub-btn-svg{
