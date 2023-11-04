@@ -244,15 +244,16 @@ button {
     margin: 0 auto;
 }
 
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .first-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), url(../images/hero-bg-mobile-tablet@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 768px) {
     .first-section{
         background-position: center;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .first-section {
-        background-image: url(../images/hero-bg-mobile-tablet@2x.jpg);
-        }
     }
 }
 
@@ -265,7 +266,8 @@ button {
 
     @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .first-section {
-        background-image: url(../images/hero-bg-desktop@2x.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), url(../images/hero-bg-desktop@2x.jpg);
         }
     }
 }
