@@ -248,6 +248,12 @@ button {
     .first-section{
         background-position: center;
     }
+
+    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .first-section {
+        background-image: url(../images/hero-bg-mobile-tablet@2x.jpg);
+        }
+    }
 }
 
 @media screen and (min-width: 1158px) {
@@ -255,6 +261,12 @@ button {
         padding: 188px 0px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), url(../images/hero-bg-desktop.jpg);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .first-section {
+        background-image: url(../images/hero-bg-desktop@2x.jpg);
+        }
     }
 }
 
@@ -729,11 +741,12 @@ button {
     text-transform: uppercase;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
     .footer-link{
-        text-align: left;
+        margin: 0;
     }
 }
 
@@ -808,10 +821,6 @@ button {
 
 /* FOOTER FORM */
 
-.footer-div-form{
-
-}
-
 .footer-form-p{
     margin-bottom: 16px;
     font-weight: 500;
@@ -840,12 +849,8 @@ button {
     }
 }
 
-.footer-label{
-
-}
-
 .footer-input{
-    width: 396px;
+    width: 398px;
     height: 40px;
     border: 1px solid var(--white-color);
     background-color: transparent;
@@ -856,6 +861,12 @@ button {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: var(--white-color);
+}
+
+@media screen and (min-width: 320px) and (max-width: 427px) {
+    .footer-input {
+        width: 290px;
+    }
 }
 
 @media screen and (min-width: 768px) {
